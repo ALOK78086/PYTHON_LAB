@@ -1,0 +1,114 @@
+# 1. WAP to read an entire text file.
+file = open("sample.txt", "r")
+data = file.read()
+print(data)
+file.close()
+
+
+# 2. WAP to read 5, 15 and 35 characters from text file.
+file = open("sample.txt", "r")
+
+print("First 5 chars:", file.read(5))
+print("Next 15 chars:", file.read(15))
+print("Next 35 chars:", file.read(35))
+
+file.close()
+
+
+# 3. WAP to read first n lines of a file.
+n = int(input("Enter number of lines to read: "))
+
+file = open("sample.txt", "r")
+for i in range(n):
+    print(file.readline())
+file.close()
+
+
+# 4. WAP to read last n lines of a file.
+n = int(input("Enter number of last lines: "))
+
+file = open("sample.txt", "r")
+lines = file.readlines()
+
+for i in range(len(lines)-n, len(lines)):
+    print(lines[i])
+file.close()
+
+
+# 5. WAP to read user's specified characters, lines from first, lines from last.
+file = open("sample.txt", "r")
+
+# characters
+c = int(input("Enter number of characters: "))
+print(file.read(c))
+
+file.seek(0)
+
+# first lines
+n = int(input("Enter number of first lines: "))
+for i in range(n):
+    print(file.readline())
+
+file.seek(0)
+
+# last lines
+n = int(input("Enter number of last lines: "))
+lines = file.readlines()
+
+for i in range(len(lines)-n, len(lines)):
+    print(lines[i])
+
+file.close()
+
+
+# 6. WAP to append text to a file and display the text.
+file = open("sample.txt", "a")
+text = input("Enter text to append: ")
+file.write(text + "\n")
+file.close()
+
+file = open("sample.txt", "r")
+print(file.read())
+file.close()
+
+
+# 7. WAP to read a file line by line and store it into a variable and list.
+file = open("sample.txt", "r")
+
+data = file.read()   # variable
+file.seek(0)
+
+lines_list = file.readlines()   # list
+
+print("Data in variable:\n", data)
+print("Data in list:", lines_list)
+
+file.close()
+
+
+# 8. WAP to count the number of lines and words in a text file.
+file = open("sample.txt", "r")
+
+lines = file.readlines()
+line_count = len(lines)
+
+word_count = 0
+for i in range(len(lines)):
+    word_count += len(lines[i].split())
+
+print("Number of lines:", line_count)
+print("Number of words:", word_count)
+
+file.close()
+
+
+# 9. WAP to copy the contents of a file to another file.
+source = open("sample.txt", "r")
+data = source.read()
+source.close()
+
+target = open("copy.txt", "w")
+target.write(data)
+target.close()
+
+print("File copied successfully!")
