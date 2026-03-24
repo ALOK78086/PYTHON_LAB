@@ -1,0 +1,45 @@
+# 1. WAP to print name
+print("My name is Alok Kumar")
+
+# 2. WAP to print self introduction
+print("Hello! My name is Alok Kumar. I am a student and learning programming.")
+
+# 3. WAP to assign values to variable and print
+a = 10
+b = 20
+print("Value of a:", a)
+print("Value of b:", b)
+
+# 4. WAP to perform all arithmetic operations
+x = 15
+y = 5
+
+print("Addition:", x + y)
+print("Subtraction:", x - y)
+print("Multiplication:", x * y)
+print("Division:", x / y)
+print("Modulus:", x % y)
+print("Exponent:", x ** y)
+print("Floor Division:", x // y)
+
+# 5. WAP to swap values with temp variable
+a = 5
+b = 10
+
+temp = a
+a = b
+b = temp
+
+print("After swapping with temp:")
+print("a =", a)
+print("b =", b)
+
+# 6. WAP to swap values without temp variable
+a = 3
+b = 7
+
+a, b = b, a
+
+print("After swapping without temp:")
+print("a =", a)
+print("b =", b)
