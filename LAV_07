@@ -1,0 +1,81 @@
+# 1. WAP to addition, subtraction, multiplication, division of all the numbers in a list.=====================================
+n = int(input("Enter number of elements: "))
+lst = []
+
+for i in range(n):
+    val = int(input("Enter value: "))
+    lst.append(val)
+
+add = 0
+mul = 1
+
+for i in range(len(lst)):
+    add += lst[i]
+    mul *= lst[i]
+
+print("Addition:", add)
+print("Multiplication:", mul)
+
+# subtraction (sequential)=========
+sub = lst[0]
+for i in range(1, len(lst)):
+    sub -= lst[i]
+
+print("Subtraction:", sub)
+
+# division (sequential)=============
+div = lst[0]
+for i in range(1, len(lst)):
+    if lst[i] != 0:
+        div /= lst[i]
+
+print("Division:", div)
+
+
+# 2. WAP to find the maximum of three numbers.================================
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+c = int(input("Enter third number: "))
+
+max_num = a
+if b > max_num:
+    max_num = b
+if c > max_num:
+    max_num = c
+
+print("Maximum number:", max_num)
+
+
+# 3. WAP to print reverse string.=====================================================
+text = input("Enter a string: ")
+
+rev = ""
+for i in range(len(text)-1, -1, -1):
+    rev += text[i]
+
+print("Reversed string:", rev)
+
+
+# 4. WAP to check whether a number falls within a given range.=========================================
+num = int(input("Enter number: "))
+start = int(input("Enter start of range: "))
+end = int(input("Enter end of range: "))
+
+if num in range(start, end + 1):
+    print("Number is in range")
+else:
+    print("Number is not in range")
+
+
+# 5. WAP to print the even numbers from a given list.================================================
+n = int(input("Enter number of elements: "))
+lst = []
+
+for i in range(n):
+    val = int(input("Enter value: "))
+    lst.append(val)
+
+print("Even numbers are:")
+for i in range(len(lst)):
+    if lst[i] % 2 == 0:
+        print(lst[i])
