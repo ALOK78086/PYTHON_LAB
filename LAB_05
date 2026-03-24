@@ -1,0 +1,44 @@
+# 1. WAP to create a tuple.===============================================================
+t1 = (1, 2, 3, 4, 5)
+print("Tuple:", t1)
+
+
+# 2. WAP to create a tuple with different data types.=============================================
+t2 = (10, "Hello", 3.14, True)
+print("Tuple with different data types:", t2)
+
+
+# 3. WAP to create a tuple of numbers and print one item.=====================================================
+t3 = (5, 10, 15, 20, 25)
+print("Tuple:", t3)
+print("One item (index 2):", t3[2])   # prints 15
+
+
+# 4. WAP to convert a tuple to a string. (use .join() )================================================================================
+t4 = ('H', 'e', 'l', 'l', 'o')
+result = "".join(t4)
+print("Converted string:", result)
+
+
+# 5. WAP to get the 4th element from the last element of a tuple.==============================================
+t5 = (10, 20, 30, 40, 50, 60, 70)
+print("Tuple:", t5)
+print("4th element from last:", t5[-4])
+
+
+# 6. WAP to check whether an element exists within a tuple.=============================================================
+t6 = (1, 2, 3, 4, 5)
+num = int(input("Enter number to check: "))
+
+if num in t6:
+    print("Element exists in tuple")
+else:
+    print("Element does not exist")
+
+
+# 7. WAP to convert a list to a tuple.================================================================================
+lst = [1, 2, 3, 4, 5]
+t7 = tuple(lst)
+
+print("List:", lst)
+print("Converted tuple:", t7)
