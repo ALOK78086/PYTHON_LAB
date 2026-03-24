@@ -1,0 +1,51 @@
+# 1. WAP to sum all the items in a list.===================================================================
+# collect values from user
+n = int(input("Enter number of elements: "))
+lst = []
+
+for i in range(n):
+    val = int(input("Enter value: "))
+    lst.append(val)
+
+total = sum(lst)
+print("List:", lst)
+print("Sum of list:", total)
+
+
+# 2. WAP to multiply all the items in a list.=========================================================
+# collect values from user
+n = int(input("Enter number of elements: "))
+lst = []
+
+for i in range(n):
+    val = int(input("Enter value: "))
+    lst.append(val)
+
+result = 1
+for num in lst:
+    result *= num
+
+print("List:", lst)
+print("Multiplication of list:", result)
+
+
+# 3. WAP to print a specified list after removing the 0th, 4th and 5th elements.===================================================
+lst = ['Red', 'Green', 'White', 'Black', 'Pink', 'Yellow']
+
+# remove elements by index
+new_list = [lst[i] for i in range(len(lst)) if i not in (0, 4, 5)]
+
+print("Updated list:", new_list)
+
+
+# 4. WAP to get smallest and largest number from a list.===========================================================================
+n = int(input("Enter number of elements: "))
+lst = []
+
+for i in range(n):
+    val = int(input("Enter value: "))
+    lst.append(val)
+
+print("List:", lst)
+print("Smallest number:", min(lst))
+print("Largest number:", max(lst))
