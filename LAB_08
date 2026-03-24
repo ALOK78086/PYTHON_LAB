@@ -1,0 +1,81 @@
+# 1 Create a module named mymath.py that contains two functions: add(a, b) to return the sum of two numbers subtract(a, b) to return the difference=======
+# mymath.py
+
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b == 0:
+        raise ValueError("Denominator cannot be zero.")
+    return a / b
+#2 Create a module named area.py that contains functions to calculate: Area of a circle Area of a rectangle==========================================
+# area.py
+
+def circle_area(radius):
+    return 3.14 * radius * radius
+
+def rectangle_area(length, width):
+    return length * width
+
+def triangle_area(base, height):
+    return 0.5 * base * height
+
+#3 Create a module greetings.py that contains two functions: say_hello(name) say_goodbye(name)=================================
+# greetings.py
+
+def say_hello(name):
+    print("Hello", name)
+
+def say_goodbye(name):
+    print("Goodbye", name)
+#4 Create a module calculator.py that contains: A constant PI = 3.14 A function square(n) to calculate square of a number=======================
+# calculator.py
+
+PI = 3.14
+
+def square(n):
+    return n * n
+
+def circle_area(radius):
+    return PI * radius * radius
+
+def rectangle_area(length, width):
+    return length * width
+
+def triangle_area(base, height):
+    return 0.5 * base * height
+#5 Write a Python program that uses the math module to: Greet the user before calculation Find the square root of a number Find the power of a number Display the value of π Greeting the user after calculation
+# main.py
+
+import math
+import greetings
+import calculator
+
+# Greeting before calculation
+name = input("Enter your name: ")
+greetings.say_hello(name)
+
+# Square root
+num = int(input("Enter a number for square root: "))
+print("Square root:", math.sqrt(num))
+
+# Power
+base = int(input("Enter base: "))
+power = int(input("Enter power: "))
+print("Power:", math.pow(base, power))
+
+# Value of PI
+print("Value of PI:", math.pi)
+
+# Using custom module
+n = int(input("Enter number to find square: "))
+print("Square using calculator module:", calculator.square(n))
+
+# Goodbye message
+greetings.say_goodbye(name)
